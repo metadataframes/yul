@@ -14,9 +14,9 @@ import rdflib
 from xml.sax import handler, make_parser
 from xml.sax.saxutils import escape
 
-MODULE_PATH = "[path to rwo.xqm]"
-IN_PATH = "[source MARC/XML]"
-OUT_PATH = "[output N-Triples]"
+MODULE_PATH = "[path to /lib/rwo.xqm]"
+IN_PATH = "[path to source data]"
+OUT_PATH = "[path to output data]"
 
 def rdfxml2nt(rdfxml):
     """
@@ -139,7 +139,7 @@ try:
     if os.path.exists(OUT_PATH):
         append_write = "a" 
     else:   
-        append_write = "w" # make a new file if not
+        append_write = "w" 
     
     with open(OUT_PATH, append_write) as nt:                
         parser = make_parser()
