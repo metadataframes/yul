@@ -126,8 +126,8 @@ class MadsHandler(handler.ContentHandler):
         escaped = escape(data)
         
         # Curly braces need to be doubled, or XQuery will try to evaluate them
-        escaped += re.sub(r"\{", "{{", escaped)
-        self.record += re.sub(r"\}", "}}", escaped)
+        braces = re.sub(r"\{", "{{", escaped)
+        self.record += re.sub(r"\}", "}}", braces)
 
 try:    
     # Connect to the BaseX Server
