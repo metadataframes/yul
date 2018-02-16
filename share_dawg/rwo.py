@@ -14,9 +14,9 @@ import rdflib
 from xml.sax import handler, make_parser
 from xml.sax.saxutils import escape
 
-MODULE_PATH = "/home/tat2/Dropbox/YUL/SHARE/working-group/code/yul/share_dawg/lib/rwo.xqm"
-IN_PATH = "/home/tat2/Dropbox/YUL/SHARE/working-group/data/testing.xml"
-OUT_PATH = "/home/tat2/Dropbox/YUL/SHARE/working-group/data/out/auth00.nt"
+MODULE_PATH = "[path to /lib/rwo.xqm]"
+IN_PATH = "[path to source data]"
+OUT_PATH = "[path to output data]"
 
 def rdfxml2nt(rdfxml):
     """
